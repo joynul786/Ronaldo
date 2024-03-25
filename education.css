@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+}
+.education_container {
+  display: flex;
+  position: relative;
+  max-width: 96%;
+  justify-content: space-between;
+  padding-top: 100px;
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+
+.education_list {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  margin: 0;
+  top: 200px;
+  /* flex: 20%; */
+  max-width: 20%;
+  height: 400px;
+  padding: 0px 60px;
+}
+
+.education_list span {
+  padding-top: 20px;
+  display: inline-block;
+}
+
+.education_list span a {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.education_meluList {
+  flex: 75%;
+  max-width: 75%;
+  position: relative;
+  padding-right: 0px;
+}
+
+.education_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.education {
+  margin: 7px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid; */
+  border-bottom: 1px solid rgb(220, 219, 219);
+}
+
+.education h2 {
+  color: var(--blue);
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 16px;
+}
+
+.education_item {
+  padding: 20px 0 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.education_item::before {
+  content: "\f100";
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--blue);
+  color: white;
+}
+
+.education_item span {
+  padding-left: 65px;
+  /* width: 100%; */
+}
+
+.education_item .year {
+  color: var(--blue);
+  font-size: 17px;
+  font-weight: 800;
+  padding: 0 0 0 auto;
+}
+
+.education_item .Bachelor {
+  font-size: 25px;
+  font-weight: 800;
+  opacity: 0.87;
+  /* padding: 0; */
+  padding-top: 10px;
+  padding-bottom: 13px;
+}
+
+.education_item .University {
+  font-weight: 800;
+  opacity: 0.76;
+  font-size: 20px;
+  padding-bottom: 3px;
+  line-height: 30px;
+}
+
+.education_item .place {
+  color: var(rgb(245, 231, 231));
+  font-size: 16px;
+  opacity: 0.44;
+  padding-top: 0px;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+/* skills */
+.skills_item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  /* margin-bottom: 20px; */
+}
+
+.css {
+  font-size: 23px;
+  color: black;
+  font-weight: bold;
+}
+
+.skills_item .card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  height: auto;
+  /* box-shadow: 0 1px 2px 2px rgba(0,0,0,0.1); */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  text-align: center;
+}
+
+.skil_container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.skil_left {
+  padding-right: 20px;
+  border-right: 1px solid gray;
+}
+
+.skil_right {
+  padding-left: 20px;
+}
+
+.skil_left h3,
+.skil_right h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.skil_left span,
+.skil_right span {
+  font-size: 16px;
+  opacity: 0.54;
+}
+
+/* progress */
+.progress {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  /* border: 5px solid; */
+  border-radius: 50%;
+  color: black;
+  align-self: center;
+  background: linen linear-gradient(to right, transparent 50%, var(--clr) 0);
+  margin: 20px 0;
+}
+
+.progress h1 {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 34px;
+  z-index: 1;
+  font-weight: 1000;
+}
+
+.progress::before {
+  content: "";
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+}
+
+.progress::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progress::before {
+  background-color: var(--blue);
+  transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
+}
+
+/* progress_lenght */
+.skills_Lenght {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin: 20px; */
+  padding: 20px 0;
+}
+
+.skill_left,
+.skill_right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills_Lenght_item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.photflex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  position: relative;
+}
+
+.photflex .position {
+  position: absolute;
+  bottom: 17px;
+  right: 0;
+}
+
+.Lenghtprogress {
+  border-radius: 5px;
+  width: 100%;
+  background-color: linen;
+  padding: 6px;
+  position: relative;
+}
+
+.Lenghtprogress .ratting_color {
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px;
+  background-color: var(--blue);
+}
+
+.one {
+  width: 90%;
+}
+
+.two {
+  width: 95%;
+}
+
+.three {
+  width: 70%;
+}
+
+.four {
+  width: 85%;
+}
+
+.five {
+  width: 90%;
+}
+
+.six {
+  width: 80%;
+}
+
+@media screen and (max-width: 900px) {
+  .skills_item {
+    flex-direction: column;
+  }
+
+  .skills_item .card {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .education_container {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .education_list {
+    flex-direction: column;
+    position: static;
+    flex: 100%;
+    max-width: 100%;
+    height: 0px;
+    padding-left: 20px;
+  }
+
+  .education_meluList {
+    box-sizing: border-box;
+    max-width: 100%;
+    flex: 100%;
+  }
+
+  .education_item {
+    width: 100%;
+  }
+
+  /* ratting */
+  .skills_item {
+    flex-direction: column;
+  }
+
+  .skills_item .card {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*skills_Lenght */
+  .skills_Lenght {
+    flex-direction: column;
+  }
+}
